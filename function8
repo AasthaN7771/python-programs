@@ -1,0 +1,6 @@
+def convert(s):
+    words = set(s.split())  
+    return ' '.join(sorted(words))  
+string = "banana apple orange banana apple"
+result = convert(string)
+print(f"Converted string: {result}")
