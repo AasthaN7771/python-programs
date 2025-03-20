@@ -1,0 +1,10 @@
+def sanitize_list(list):
+    if not list:  # Base case
+        return []
+    else:
+        
+        first = max(list[0], 0)  # Replace negative with 0
+        return [first] + sanitize_list(list[1:])
+numbers = [1, -2, 3, -4, 5]
+sanitized_numbers = sanitize_list(numbers)
+print(sanitized_numbers)  
