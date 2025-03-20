@@ -1,0 +1,12 @@
+def average_recursive(nums, index=0, total=0):
+    # Base case
+    if index == len(nums):
+        return total / len(nums) if len(nums) > 0 else 0  
+    
+    # Recursive case
+    return average_recursive(nums, index + 1, total + nums[index])
+
+
+numbers = [10, 20, 30, 40, 50]
+result = average_recursive(numbers)
+print(f"The average is: {result}")
