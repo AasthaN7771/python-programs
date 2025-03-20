@@ -1,0 +1,6 @@
+def is_palindrome(s):
+    s = ''.join(filter(str.isalnum, s)).lower()  
+    return s == s[::-1]  
+
+string = "A man a plan a canal Panama"
+print(f"Is palindrome: {is_palindrome(string)}")
