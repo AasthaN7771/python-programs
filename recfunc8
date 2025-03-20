@@ -1,0 +1,10 @@
+def length_of_string(s):
+    # Base case
+    if s == "":
+        return 0
+    # Recursive case
+    return 1 + length_of_string(s[1:])
+
+string = "Hello, world!"
+result = length_of_string(string)
+print(f"The length of the string is: {result}")
