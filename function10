@@ -1,0 +1,21 @@
+def frequency(input_string):
+    # Initialize an empty dictionary to hold word frequencies
+    word_freq = {}
+    
+    # Split the input string into words
+    words = input_string.split()
+    
+    # Count the frequency of each word
+    for word in words:
+        if word in word_freq:
+            word_freq[word] += 1  
+        else:
+            word_freq[word] = 1   
+    
+    # Sort the dictionary by keys (words) and return as a new dictionary
+    sorted_freq = dict(sorted(word_freq.items()))
+    return sorted_freq
+
+input_string = "apple banana apple orange banana apple"
+result = frequency(input_string)
+print(result)
