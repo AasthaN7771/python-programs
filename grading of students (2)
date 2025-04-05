@@ -1,0 +1,57 @@
+def get_grade(marks):
+    if marks == "NA":
+        return "NA"
+    marks = int(marks)
+    if marks < 0 or marks > 100:
+        return "Invalid Marks"
+    elif marks <= 39:
+        return "F"
+    elif 40 <= marks <= 44:
+        return "P"
+    elif 45 <= marks <= 49:
+        return "C"
+    elif 50 <= marks <= 54:
+        return "B"
+    elif 55 <= marks <= 59:
+        return "B+"
+    elif 60 <= marks <= 69:
+        return "A"
+    elif 70 <= marks <= 79:
+        return "A+"
+    elif 80 <= marks <= 100:
+        return "O"
+
+#  marks for three subjects
+marks_subject1 = input("Enter marks for Subject 1 (or 'NA' if absent): ")
+marks_subject2 = input("Enter marks for Subject 2 (or 'NA' if absent): ")
+marks_subject3 = input("Enter marks for Subject 3 (or 'NA' if absent): ")
+
+# Initialize total and count of valid marks
+total_marks = 0
+valid_subjects = 0
+failed = False
+
+for marks in [marks_subject1, marks_subject2, marks_subject3]:
+    if marks == "NA":
+        continue
+    else:
+        marks = int(marks)
+        total_marks += marks
+        valid_subjects += 1
+        if marks <= 39:
+            failed = True
+
+average_marks = total_marks / valid_subjects if valid_subjects > 0 else 0
+
+print(f"Total Marks: {total_marks}")
+print(f"Average Marks: {average_marks:.2f}")
+
+if failed:
+    print("Result: Fail")
+else:
+    print("Result: Pass")
+
+
+for i, marks in enumerate([marks_subject1, marks_subject2, marks_subject3], start=1):
+    grade = get_grade(marks)
+    print(f"Grade for Subject {i}: {grade}")
