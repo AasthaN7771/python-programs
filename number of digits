@@ -1,0 +1,6 @@
+# Accept a number from the user
+number = input("Please enter a number: ")
+num_digits = len(number.strip('-'))
+
+# Print the number of digits
+print(f"The number of digits in the number is: {num_digits}")
