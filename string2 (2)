@@ -1,0 +1,38 @@
+
+def to_lower_case(string):
+    result = ""
+    for char in string:
+        if 'A' <= char <= 'Z':  
+            result += chr(ord(char) + 32)  
+        else:
+            result += char  
+    return result
+
+def to_upper_case(string):
+    result = ""
+    for char in string:
+        if 'a' <= char <= 'z':  
+            result += chr(ord(char) - 32)  
+        else:
+            result += char
+    return result
+
+# Function to convert to toggle case
+def to_toggle_case(string):
+    result = ""
+    for char in string:
+        if 'A' <= char <= 'Z':  # Check if the character is uppercase
+            result += chr(ord(char) + 32)  # Convert to lowercase
+        elif 'a' <= char <= 'z':  # Check if the character is lowercase
+            result += chr(ord(char) - 32)  # Convert to uppercase
+        else:
+            result += char  
+    return result
+
+
+string1 = "Hello World!"
+
+print("Original String:", string1)
+print("Lower Case:", to_lower_case(string1))
+print("Upper Case:", to_upper_case(string1))
+print("Toggle Case:", to_toggle_case(string1))
