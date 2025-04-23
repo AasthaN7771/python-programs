@@ -1,0 +1,10 @@
+import os
+import shutil
+
+subdirectory = 'new_subdirectory'
+os.makedirs(subdirectory, exist_ok=True)
+
+source_file = 'source_directory/example.txt'  
+shutil.copy(source_file, subdirectory)
+
+print(f"File copied to {subdirectory}.")

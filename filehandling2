@@ -1,0 +1,11 @@
+
+import pandas as pd
+
+df = pd.read_excel('students.xlsx')  
+
+students_dict = df.to_dict(orient='records')
+for student in students_dict:
+    student['Total'] = student['Subject 1'] + student['Subject 2'] + student['Subject 3']
+
+
+print(students_dict)

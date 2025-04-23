@@ -1,0 +1,12 @@
+def create_vcard(name, phone, email):
+    vcard = f"BEGIN:VCARD\nVERSION:3.0\nFN:{name}\nTEL;TYPE=CELL:{phone}\nEMAIL:{email}\nEND:VCARD"
+    with open(f"{name}.vcf", "w") as file:
+        file.write(vcard)
+    print(f"vCard for {name} created successfully.")
+
+# Accept contact details
+name = input("Enter name: ")
+phone = input("Enter phone number: ")
+email = input("Enter email: ")
+
+create_vcard(name, phone, email)
