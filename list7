@@ -1,0 +1,30 @@
+stack = []
+
+def push(item):
+    stack.append(item)
+    print(f"Pushed {item} to stack.")
+
+def pop():
+    if stack:
+        item = stack.pop()
+        print(f"Popped {item} from stack.")
+    else:
+        print("Stack is empty.")
+
+def display():
+    print("Current stack:", stack)
+
+while True:
+    print("\n1. Push\n2. Pop\n3. Display\n4. Exit")
+    choice = input("Enter your choice: ")
+    if choice == '1':
+        item = input("Enter item to push: ")
+        push(item)
+    elif choice == '2':
+        pop()
+    elif choice == '3':
+        display()
+    elif choice == '4':
+        break
+    else:
+        print("Invalid choice. Please try again.")

@@ -1,0 +1,7 @@
+# List of temperatures in Fahrenheit
+fahrenheit_temps = [32, 68, 100, 212, 50]
+print("Temperatures in Fahrenheit:", fahrenheit_temps)
+
+# Convert to Celsius
+celsius_temps = [(temp - 32) * 5/9 for temp in fahrenheit_temps]
+print("Temperatures in Celsius:", celsius_temps)
