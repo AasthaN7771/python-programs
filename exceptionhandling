@@ -1,0 +1,10 @@
+while True:
+    user_input = input("Please enter an integer: ")
+    try:
+        # Try to convert the input to an integer
+        integer_value = int(user_input)
+        print(f"You have entered the integer: {integer_value}")
+        break  # Exit the loop if the input is valid
+    except ValueError:
+        # If a ValueError occurs, it means the input was not an integer
+        print("Error: That is not a valid integer. Please try again.")
