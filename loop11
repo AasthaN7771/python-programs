@@ -1,0 +1,11 @@
+import math
+def sin_x(x, terms=10):
+    sine = 0
+    for n in range(terms):
+        sign = (-1) ** n
+        sine += sign * (x ** (2 * n + 1)) / math.factorial(2 * n + 1)
+    return sine
+
+# Example usage
+x = 1  # Radian value
+print(f"sin({x}) = {sin_x(x)}")

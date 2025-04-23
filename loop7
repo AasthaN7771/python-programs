@@ -1,0 +1,12 @@
+
+
+
+# nCr and nPr
+def combinations_and_permutations(n, r):
+    n_fact = math.factorial(n)
+    r_fact = math.factorial(r)
+    n_r_fact = math.factorial(n - r)
+    nCr = n_fact // (r_fact * n_r_fact)
+    nPr = n_fact // n_r_fact
+    return nCr, nPr
+

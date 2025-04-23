@@ -1,0 +1,14 @@
+
+
+
+import string
+
+# Uppercase alphabets
+print("Uppercase Alphabets:")
+print(string.ascii_uppercase)
+
+# Lowercase alphabets
+print("Lowercase Alphabets:")
+print(string.ascii_lowercase)
+
+
