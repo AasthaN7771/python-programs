@@ -1,0 +1,33 @@
+import math
+
+class Solid:
+    def __init__(self, shape, dimensions):
+        self.shape = shape
+        self.dimensions = dimensions
+
+    def surface_area(self):
+        if self.shape == "cube":
+            return 6 * (self.dimensions[0] ** 2)
+        elif self.shape == "sphere":
+            return 4 * math.pi * (self.dimensions[0] ** 2)
+        elif self.shape == "cylinder":
+            r, h = self.dimensions
+            return 2 * math.pi * r * (r + h)
+        else:
+            return None
+
+    def volume(self):
+        if self.shape == "cube":
+            return self.dimensions[0] ** 3
+        elif self.shape == "sphere":
+            return (4/3) * math.pi * (self.dimensions[0] ** 3)
+        elif self.shape == "cylinder":
+            r, h = self.dimensions
+            return math.pi * (r ** 2) * h
+        else:
+            return None
+
+
+solid = Solid("cylinder", (3, 5))
+print("Surface Area:", solid.surface_area())
+print("Volume:", solid.volume())

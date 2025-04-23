@@ -1,0 +1,26 @@
+class CustomString:
+    def __init__(self, value=""):
+        self.value = value
+
+    def __iadd__(self, other):
+        self.value += other
+        return self
+
+    def toLower(self):
+        return self.value.lower()
+
+    def toUpper(self):
+        return self.value.upper()
+
+    def __str__(self):
+        return self.value
+
+
+custom_str = CustomString("Hello")
+print("Original String:", custom_str)
+
+custom_str += " World"
+print("After Concatenation:", custom_str)
+
+print("Lowercase:", custom_str.toLower())
+print("Uppercase:", custom_str.toUpper())

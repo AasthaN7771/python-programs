@@ -1,0 +1,31 @@
+class Shape:
+    def __init__(self, shape_type, dimensions):
+        self.shape_type = shape_type
+        self.dimensions = dimensions
+
+    def perimeter(self):
+        if self.shape_type == "circle":
+            return 2 * math.pi * self.dimensions[0]
+        elif self.shape_type == "square":
+            return 4 * self.dimensions[0]
+        elif self.shape_type == "rectangle":
+            l, w = self.dimensions
+            return 2 * (l + w)
+        else:
+            return None
+
+    def area(self):
+        if self.shape_type == "circle":
+            return math.pi * (self.dimensions[0] ** 2)
+        elif self.shape_type == "square":
+            return self.dimensions[0] ** 2
+        elif self.shape_type == "rectangle":
+            l, w = self.dimensions
+            return l * w
+        else:
+            return None
+
+
+shape = Shape("rectangle", (4, 5))
+print("Perimeter:", shape.perimeter())
+print("Area:", shape.area())
