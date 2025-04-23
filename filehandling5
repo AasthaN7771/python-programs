@@ -1,0 +1,4 @@
+faculty_members = ["nigam dave", " darshit shah", "amitava chaudhary", "shweta panwar", "bhasha "]
+
+filtered_names = list(filter(lambda name: len(name) > 8, faculty_members))
+print("Filtered Names:", filtered_names)  
