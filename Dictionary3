@@ -1,0 +1,13 @@
+#  dictionary with department number, employee roll number, and salary
+employee_data = {
+    'dept1': [(101, 50000), (102, 60000), (103, 55000)],
+    'dept2': [(201, 70000), (202, 80000), (203, 75000)],
+    'dept3': [(301, 40000), (302, 45000), (303, 42000)]
+}
+
+# department-wise min and max salary
+for dept, employees in employee_data.items():
+    salaries = [salary for _, salary in employees]
+    min_salary = min(salaries)
+    max_salary = max(salaries)
+    print(f"{dept} - Min Salary: {min_salary}, Max Salary: {max_salary}")

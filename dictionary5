@@ -1,0 +1,21 @@
+
+#  grocery items and their prices
+grocery_prices = {
+    'apple': 2.5,
+    'banana': 1.2,
+    'orange': 1.5,
+    'milk': 3.0
+}
+
+# grocery items and quantity purchased
+grocery_quantities = {
+    'apple': 3,
+    'banana': 5,
+    'orange': 2,
+    'milk': 1
+}
+
+
+total_bill = sum(grocery_prices[item] * grocery_quantities[item] for item in grocery_quantities)
+
+print("Total bill:", total_bill)
